@@ -1,0 +1,3 @@
+/home/titan/thkim/work/booth2_mult_signed_8x8/dc_synthesis/designs/booth_netlist.v
+/home/titan/thkim/work/booth2_mult_signed_8x8/vcs_verification/netlist/8x8_booth2_signed_tb.v
+/soc/vlsi/PDK/SAED32_EDK/lib/stdcell_hvt/verilog/saed32nm_hvt.v

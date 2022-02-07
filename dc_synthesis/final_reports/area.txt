@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : top
+Version: Q-2019.12-SP5-5
+Date   : Mon Feb  7 13:15:52 2022
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_ss0p95v125c (File: /soc/vlsi/PDK/SAED32_EDK_01132015/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db)
+
+Number of ports:                           68
+Number of nets:                           553
+Number of cells:                          505
+Number of combinational cells:            465
+Number of sequential cells:                32
+Number of macros/black boxes:               0
+Number of buf/inv:                        120
+Number of references:                       4
+
+Combinational area:               1175.924291
+Buf/Inv area:                      163.922881
+Noncombinational area:             214.751687
+Macro/Black Box area:                0.000000
+Net Interconnect area:             200.772650
+
+Total cell area:                  1390.675978
+Total area:                       1591.448627
+1

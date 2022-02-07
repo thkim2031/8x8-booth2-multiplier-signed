@@ -1,0 +1,87 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "booth2_signed_tb": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "partial_product": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "full_adder": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "half_adder": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "bytes": 7109,
+            "mod": "...MASTER...",
+            "checksum": 4294967295,
+            "out": "objs/amcQw_d.o",
+            "mode": 4
+        },
+        "xpiKP_d": {
+            "bytes": 21590,
+            "mod": "booth2_signed_tb",
+            "checksum": 4294967295,
+            "out": "xpiKP_d.o",
+            "archive": "archive.0/_32152_archive_1.a",
+            "mode": 4
+        },
+        "mETiY_d": {
+            "bytes": 23843,
+            "mod": "partial_product",
+            "checksum": 4294967295,
+            "out": "mETiY_d.o",
+            "archive": "archive.0/_32152_archive_1.a",
+            "mode": 4
+        },
+        "BEdzp_d": {
+            "bytes": 8260,
+            "mod": "full_adder",
+            "checksum": 4294967295,
+            "out": "BEdzp_d.o",
+            "archive": "archive.0/_32152_archive_1.a",
+            "mode": 4
+        },
+        "ArxBC_d": {
+            "bytes": 6624,
+            "mod": "half_adder",
+            "checksum": 4294967295,
+            "out": "ArxBC_d.o",
+            "archive": "archive.0/_32152_archive_1.a",
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.0/_32152_archive_1.a",
+            "objects": [
+                [
+                    "xpiKP_d.o",
+                    21590
+                ],
+                [
+                    "mETiY_d.o",
+                    23843
+                ],
+                [
+                    "BEdzp_d.o",
+                    8260
+                ],
+                [
+                    "ArxBC_d.o",
+                    6624
+                ]
+            ],
+            "size": 60317
+        }
+    ],
+    "reusePaths": {}
+}

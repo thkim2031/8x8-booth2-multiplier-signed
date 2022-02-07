@@ -1,0 +1,9 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/home/titan/thkim/work/booth2_mult_signed_8x8/vcs_verification/rtl/work
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+TOP=booth2_signed_tb 

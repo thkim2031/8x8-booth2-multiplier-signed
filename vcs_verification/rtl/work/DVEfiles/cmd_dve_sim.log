@@ -1,0 +1,40 @@
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /home/titan/thkim/work/booth2_mult_signed_8x8/vcs_verification/rtl/work/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpGJj5BK
+synUtils::sendTool -active {_icl_start_rpc -version "K-2015.09-SP1_Full64" -sync_file /tmp/vcs_dve_rpc.thkim.32283}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.thkim.32283}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+synopsys::dump -add {booth2_signed_tb.clk booth2_signed_tb.final_result booth2_signed_tb.multiplier booth2_signed_tb.rst booth2_signed_tb.x } -aggregates  -fid VPD0
+ucliGUI::getSignalValues -scope booth2_signed_tb -radix {hexadecimal } -list {{final_result[15:0]} }
+ucliGUI::getSignalValues -scope booth2_signed_tb -radix {binary } -list {rst }
+ucliGUI::getSignalValues -scope booth2_signed_tb -radix {binary } -list {clk }
+ucliGUI::getSignalValues -scope booth2_signed_tb -radix {hexadecimal } -list {{x[7:0]} }
+ucliGUI::getSignalValues -scope booth2_signed_tb -radix {hexadecimal } -list {{multiplier[7:0]} }
+ucliGUI::getSignalValues -scope booth2_signed_tb -radix {decimal } -list {{final_result[15:0]} }
+ucliGUI::getSignalValues -scope booth2_signed_tb -radix {decimal } -list {{x[7:0]} }
+ucliGUI::getSignalValues -scope booth2_signed_tb -radix {decimal } -list {{multiplier[7:0]} }
+synopsys::run -relative 500000.000000ps
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+ucli_exit

@@ -1,0 +1,76 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: Q-2019.12-SP5-5
+Date   : Mon Feb  7 13:15:52 2022
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32hvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: multiplier_r_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: final_result_r_reg[13]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                8000                  saed32hvt_ss0p95v125c
+  booth              8000                  saed32hvt_ss0p95v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  multiplier_r_reg[0]/CLK (DFFX1_HVT)                     0.00       0.00 r
+  multiplier_r_reg[0]/Q (DFFX1_HVT)                       0.20       0.20 r
+  booth0/multiplier[0] (booth)                            0.00       0.20 r
+  booth0/U179/Y (NBUFFX2_HVT)                             0.08       0.28 r
+  booth0/U180/Y (NAND2X0_HVT)                             0.06       0.34 f
+  booth0/U32/Y (XOR2X1_HVT)                               0.18       0.52 r
+  booth0/U392/Y (AO21X1_HVT)                              0.09       0.61 r
+  booth0/U135/Y (INVX0_HVT)                               0.05       0.66 f
+  booth0/U89/Y (OR2X2_HVT)                                0.10       0.76 f
+  booth0/U203/Y (AND2X1_HVT)                              0.08       0.85 f
+  booth0/U196/Y (NAND2X0_HVT)                             0.05       0.90 r
+  booth0/U195/Y (OAI22X1_HVT)                             0.13       1.03 f
+  booth0/U51/Y (XOR3X2_HVT)                               0.10       1.13 r
+  booth0/U20/Y (INVX2_HVT)                                0.04       1.17 f
+  booth0/U93/Y (INVX2_HVT)                                0.03       1.20 r
+  booth0/U198/Y (AND2X1_HVT)                              0.07       1.28 r
+  booth0/U197/Y (OR2X1_HVT)                               0.07       1.35 r
+  booth0/U271/Y (OA21X1_HVT)                              0.11       1.46 r
+  booth0/U72/Y (OR2X2_HVT)                                0.09       1.54 r
+  booth0/U216/Y (AO22X1_HVT)                              0.15       1.69 r
+  booth0/U11/Y (OAI22X1_HVT)                              0.14       1.83 f
+  booth0/U156/Y (XNOR2X2_HVT)                             0.13       1.95 r
+  booth0/U332/Y (NAND2X0_HVT)                             0.05       2.01 f
+  booth0/U81/Y (OAI22X2_HVT)                              0.12       2.13 r
+  booth0/U331/Y (XNOR2X2_HVT)                             0.13       2.26 r
+  booth0/U278/Y (AND2X1_HVT)                              0.09       2.35 r
+  booth0/U57/Y (NBUFFX2_HVT)                              0.07       2.42 r
+  booth0/U50/Y (AND2X1_HVT)                               0.07       2.49 r
+  booth0/U258/Y (AO21X1_HVT)                              0.06       2.55 r
+  booth0/result[13] (booth)                               0.00       2.55 r
+  final_result_r_reg[13]/D (DFFX1_HVT)                    0.00       2.55 r
+  data arrival time                                                  2.55
+
+  clock CLK (rise edge)                                   2.64       2.64
+  clock network delay (ideal)                             0.00       2.64
+  final_result_r_reg[13]/CLK (DFFX1_HVT)                  0.00       2.64 r
+  library setup time                                     -0.09       2.55
+  data required time                                                 2.55
+  --------------------------------------------------------------------------
+  data required time                                                 2.55
+  data arrival time                                                 -2.55
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
